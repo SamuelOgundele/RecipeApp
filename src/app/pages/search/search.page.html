@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Search</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar (ionChange)="searchChanged($event)"></ion-searchbar>
+  <ion-list>
+    <ion-item *ngFor="let recipe of recipes" [routerLink]="['/tabs/details', recipe.idMeal]">
+      <ion-label>{{ recipe.strMeal }}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+

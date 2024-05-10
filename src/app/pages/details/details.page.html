@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ recipe?.strMeal }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <img [src]="recipe?.strMealThumb"/>
+    <ion-card-header>
+      <ion-card-title>{{ recipe?.strMeal }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{ recipe?.strInstructions }}</p>
+      <ion-button (click)="toggleFavorite(recipe)">Toggle Favorite</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

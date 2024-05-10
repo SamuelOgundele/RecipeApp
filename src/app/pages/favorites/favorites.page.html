@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Favorites</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let recipe of favorites">
+      <ion-label>{{ recipe.strMeal }}</ion-label>
+      <ion-button (click)="removeFromFavorites(recipe)">Remove</ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>
